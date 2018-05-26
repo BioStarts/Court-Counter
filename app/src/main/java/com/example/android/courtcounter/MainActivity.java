@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-
+//uhjhj
 public class MainActivity extends AppCompatActivity {
 int scoreTeamA = 0;
 
