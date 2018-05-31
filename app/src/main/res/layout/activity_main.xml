@@ -6,49 +6,156 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="160dp"
+        android:layout_height="433dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Team A"
+            android:textAlignment="center"
+            android:textColor="#616161"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/team_a_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="56sp" />
+
+        <Button
+            android:id="@id/team_a_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:onClick="addThreeForTeamA"
+            android:text="+3 Points" />
+
+        <Button
+            android:id="@id/team_a_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:onClick="addTwoForTeamA"
+            android:text="+2 Points" />
+
+        <Button
+            android:id="@id/team_a_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:onClick="addNullForTeamA"
+            android:text="Free throw" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="153dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="43dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginLeft="115dp"
+        android:layout_marginRight="116dp"
+        android:layout_marginStart="115dp"
+        android:onClick="addNull"
+        android:text="Finish"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:id="@+id/linearLayout2"
+        android:layout_width="160dp"
+        android:layout_height="433dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="16dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
             android:gravity="center"
             android:padding="4dp"
-            android:text="Team A" />
+            android:text="Team B"
+            android:textAlignment="center"
+            android:textColor="#616161"
+            android:textSize="24sp" />
 
         <TextView
+            android:id="@+id/team_b_score"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
             android:gravity="center"
             android:padding="4dp"
-            android:id="@+id/team_a_score"
-            android:text="0" />
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="56sp" />
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:text="+3 Points"
             android:id="@id/team_a_score"
-            android:onClick="addThreeForTeamA"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:onClick="addThreeForTeamB"
+            android:text="+3 Points" />
 
         <Button
+            android:id="@id/team_a_score"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="+2 Points"
-            android:onClick="addTwoForTeamA"
-            android:id="@id/team_a_score"/>
+            android:onClick="addTwoForTeamB"
+            android:text="+2 Points" />
+
         <Button
+            android:id="@id/team_a_score"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="Free throw"
-            android:onClick="addNullForTeamA"
-            android:id="@id/team_a_score"/>
+            android:onClick="addNullForTeamB"
+            android:text="Free throw" />
     </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="490dp"
+        android:background="?android:attr/listDivider"
+        tools:layout_editor_absoluteX="191dp"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
 
 </android.support.constraint.ConstraintLayout>
